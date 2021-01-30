@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BAUET</string>
+    <string name="Welcome_Title">Welcome</string>
+    <string name="welcome_user_name">Fardin</string>
+    <string name="batch_title">BATCH:</string>
+    <string name="batch_name">9TH</string>
+    <string name="class_schedule_title">Class Schedule</string>
+    <string name="today_is_title">Today :</string>
+    <string name="today_is">Monday</string>
+    <string name="class_time">8:15</string>
+    <string name="am_or_pm">AM</string>
+    <string name="class_is">Math:2247</string>
+
+</resources>
