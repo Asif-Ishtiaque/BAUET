@@ -17,7 +17,7 @@
         android:fontFamily="@font/product_sans"
         android:text="@string/Welcome_Title"
         android:textColor="@color/blurry_white"
-        android:textSize="33sp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +30,7 @@
         android:fontFamily="@font/product_sans"
         android:text="@string/welcome_user_name"
         android:textColor="@color/blurry_white"
-        android:textSize="33sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@+id/Welcome_user"
         app:layout_constraintStart_toEndOf="@+id/Welcome_user" />
 

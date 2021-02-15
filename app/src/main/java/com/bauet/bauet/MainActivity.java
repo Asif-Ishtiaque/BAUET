@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     //s=second
     //t=third
 
+
+    //Cursurs Here
     //Sunday Cursor Variable
     Cursor sun_f = null;
     Cursor sun_s = null;
@@ -117,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView weather_icons;
 
 
+    //User Name
+    private String mDisplayName;
+
     private NotificationManagerCompat NotificationManager;
 
     @Override
@@ -128,8 +134,8 @@ public class MainActivity extends AppCompatActivity {
         weather_icons = findViewById(R.id.WeatherView);
          temp = findViewById(R.id.textView);
 
-
-
+       //Pulling from Local Saved Data and Showing in main Menu
+        setUpDisplayName();
 
 
        //Full Screen
@@ -216,6 +222,10 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("BAUET", "Disabled");
             }
         };
+
+
+
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -232,6 +242,28 @@ public class MainActivity extends AppCompatActivity {
         }
         mLocationManager.requestLocationUpdates(LOCATION_PROVIDER, MIN_TIME, MIN_DISTANCE, mLocationListener);
        }
+
+///Display Name Setup
+    private void setUpDisplayName()
+    {
+        TextView username_text_field =(TextView) findViewById(R.id.Welcome_user_name);
+
+        SharedPreferences perfs =  getSharedPreferences(Register.CHAT_PREFS, MODE_PRIVATE);
+        mDisplayName = perfs.getString(Register.DISPLAY_NAME_KEY,null);
+        if(mDisplayName == null)
+        {
+            mDisplayName ="Anonymous";
+        }
+        else
+        {
+              username_text_field.setText(mDisplayName);
+        }
+    }
+
+
+
+
+
 
      //What happen after user accept or delclained permission
     @Override

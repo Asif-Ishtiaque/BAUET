@@ -1,5 +1,6 @@
 package com.bauet.bauet;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -26,12 +27,19 @@ import android.widget.Toast;
 
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Login extends AppCompatActivity {
     // TODO: Add member variables here:
     // UI references.
     private EditText mEmailView;
     private EditText mPasswordView;
     private Button signUP;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,12 +84,13 @@ public class Login extends AppCompatActivity {
 
 
         // TODO: Grab an instance of FirebaseAuth
+        mAuth = FirebaseAuth.getInstance();
 
     }
 
     // Executed when Sign in button pressed
-    public void signInExistingUser(View v)   {
-        // TODO: Call attemptLogin() here
+    public void logIN(View v)   {
+        attemptLogin();
 
     }
 
@@ -106,14 +115,50 @@ public class Login extends AppCompatActivity {
     private void attemptLogin() {
 
 
+
+
+       String email_log =  mEmailView.getText().toString();
+       String password_log =  mPasswordView.getText().toString();
+
+        if(email_log.equals("")||password_log.equals("")) return;
+        Toast.makeText(Login.this, "Login in Progress", Toast.LENGTH_SHORT).show();
+
         // TODO: Use FirebaseAuth to sign in with email & password
 
+        mAuth.signInWithEmailAndPassword(email_log,password_log).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+
+                if(!task.isSuccessful())
+                {
+                    showErrorDialogs("Login Failed , Make Sure, 1.Your have Account Registered" +
+                            "2.You Have Proper Internet Connection" +
+                            "3.You Entered Right Email and Password");
+                }
+                else
+                {
+                    //After Suceessfuly Registering it will go back to Login Activity
+                    Intent intent = new Intent(Login.this,MainActivity.class);
+                    finish();
+                    startActivity(intent);
+                }
+            }
+        });
 
 
     }
 
     // TODO: Show error on screen with an alert dialog
 
-
+    private  void showErrorDialogs(String meassge)
+    {
+        new AlertDialog.Builder(this)
+                .setTitle("LOGIN ALERT")
+                .setMessage(meassge)
+                .setPositiveButton(android.R.string.ok,null)
+                .setIcon(R.drawable.ic_bauet)
+                .show();
+    }
 
 }

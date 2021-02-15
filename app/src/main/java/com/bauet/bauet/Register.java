@@ -1,5 +1,6 @@
 package com.bauet.bauet;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -19,6 +20,11 @@ import android.widget.Toast;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Register extends AppCompatActivity {
 
     // Constants
@@ -34,7 +40,7 @@ public class Register extends AppCompatActivity {
 
     // Firebase instance variables
 
-
+private FirebaseAuth mAuth;
 
 
 
@@ -69,6 +75,14 @@ public class Register extends AppCompatActivity {
         });
 
         // TODO: Get hold of an instance of FirebaseAuth
+
+        mAuth = FirebaseAuth.getInstance();
+
+
+
+
+
+
 
 
 
@@ -110,6 +124,7 @@ public class Register extends AppCompatActivity {
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
+        String username = mUsernameView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -132,12 +147,22 @@ public class Register extends AppCompatActivity {
             cancel = true;
         }
 
+
+        //UserName Check
+        if(TextUtils.isEmpty(username))
+        {
+            mUsernameView.setError("User Name Required");
+            focusView = mUsernameView;
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
         } else {
             // TODO: Call create FirebaseUser() here
+            createNewFirebaseUser();
 
         }
     }
@@ -149,17 +174,70 @@ public class Register extends AppCompatActivity {
 
     private boolean isPasswordValid(String password) {
         //TODO: Add own logic to check for a valid password (minimum 6 characters)
-        return password.length() >10;
+        return password.length() >6;
+    }
+    private boolean isUserNameValid(String username) {
+        //TODO: Add own logic to check for a valid username (minimum 3 characters)
+        return username.length() >3;
     }
 
+
+
+
     // TODO: Create a Firebase user
+    public void createNewFirebaseUser()
+    {
+        String email = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+
+
+       mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+           @Override
+           public void onComplete(@NonNull Task<AuthResult> task) {
+
+               showErrorDialogs("Successfully Registered, Login From Login Menu");
+
+
+               if(!task.isSuccessful())
+               {
+
+                   showErrorDialogs("UnSuccessfull Registration , Make Sure Your have Proper Internet Connection");
+               }
+               else
+               {
+                   //Saved Username Locally
+                   savedDisplayName();
+                   //After Suceessfuly Registering it will go back to Login Activity
+                   Intent intent = new Intent(Register.this,Login.class);
+                   finish();
+                   startActivity(intent);
+               }
+           }
+       });
+
+    }
 
 
     // TODO: Save the display name to Shared Preferences
 
 
     // TODO: Create an alert dialog to show in case registration failed
+   private  void showErrorDialogs(String meassge)
+   {
+       new AlertDialog.Builder(this)
+               .setTitle("REGISTRATION ALERT")
+               .setMessage(meassge)
+               .setPositiveButton(android.R.string.ok,null)
+               .setIcon(R.drawable.ic_bauet)
+               .show();
+   }
 
+   private void savedDisplayName()
+   {
+       String username = mUsernameView.getText().toString();
+       SharedPreferences perfs =  getSharedPreferences(CHAT_PREFS,0);
+       perfs.edit().putString(DISPLAY_NAME_KEY,username).apply();
+   }
 
 
 

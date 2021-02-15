@@ -89,6 +89,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="236dp"
         android:layout_marginTop="16dp"
+        android:onClick="logIN"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password"
