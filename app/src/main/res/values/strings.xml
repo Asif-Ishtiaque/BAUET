@@ -1,14 +1,77 @@
 <resources>
     <string name="app_name">BAUET</string>
     <string name="Welcome_Title">Welcome</string>
+    <string name="Welcome_Login_Title">Welcome Back Login in to Your Account</string>
     <string name="welcome_user_name">Fardin</string>
-    <string name="batch_title">BATCH:</string>
+    <string name="batch_title">Batch:</string>
     <string name="batch_name">9TH</string>
-    <string name="class_schedule_title">Class Schedule</string>
+    <string name="class_schedule_title">Class Card</string>
+
+    <string name="class_going">Next Class / Ongoing Class</string>
+
+    <string name="all_class_title">Todays All Class Schedule</string>
+
+    <string name="class_schedule_title_2">Class Schedule</string>
+
     <string name="today_is_title">Today :</string>
     <string name="today_is">Monday</string>
-    <string name="class_time">8:15</string>
+    <string name="class_time">08:15</string>
     <string name="am_or_pm">AM</string>
     <string name="class_is">Math:2247</string>
+    <string name="teacher_name">Md. Akher Chowdhury</string>
+
+
+    <string name="weather_show">_____</string>
+    <string name="weather_extension">°C,</string>
+    <string name="weather_location">____</string>
+
+
+    <string name="WEDNESDAY_FIRST_CLASS">10:06</string>
+    <string name="WEDNESDAY_SECOND_CLASS">9:16</string>
+    <string name="WEDNESDAY_THIRD_CLASS">10:42</string>
+
+
+    <string name="MCLASS_TIME">00.00</string>
+    <string name="MCLASS_AM_PM">AM</string>
+    <string name="MCLASS_TEACHER">Md. Akher Chowdhury</string>
+    <string name="MCLASS_CLASS">Math:2247</string>
+
+    <string name="sample_message">Hey !!</string>
+    <string name="author">Fardin Ahosan</string>
+
+
+    <string name="EMAIL">Email</string>
+    <string name="PASSWORD">Password</string>
+    <string name="LOGIN">Login</string>
+    <string name="Register">Register</string>
+    <string name="signup">Dont have an account ?signup from here</string>
+    <string name="regDone">Already Have an Account? Login From Here</string>
+    <string name="registerTitle">Register Your Account</string>
+
+
+    <string name="User_Name">User Name</string>
+
+
+    <string name="bChat">bChat</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">Password too short or does not match</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+
+    <string name="prompt_msg">Write Anything</string>
+
+
+
 
 </resources>

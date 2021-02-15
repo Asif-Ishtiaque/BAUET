@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".class_scedule_back">
+
+    <ImageView
+        android:id="@+id/class_scedule_background_button"
+        android:layout_width="372dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_class_alram" />
+
+    <ImageView
+        android:id="@+id/clock_icon"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        app:layout_constraintStart_toStartOf="@+id/class_scedule_background_button"
+        app:layout_constraintTop_toTopOf="@+id/class_scedule_background_button"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <TextView
+        android:id="@+id/class_scedule_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/class_schedule_title"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/clock_icon"
+        app:layout_constraintTop_toTopOf="@+id/class_scedule_background_button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width=".7dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/class_scedule_title_id"
+        app:srcCompat="@drawable/ic_raw_line" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="117dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/class_scedule_background_button"
+        app:layout_constraintTop_toBottomOf="@+id/class_scedule_title_id"
+        app:srcCompat="@drawable/ic_teachers_background_holder" />
+
+    <ImageView
+        android:id="@+id/teacher_gender"
+        android:layout_width="51dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_teacher_male" />
+
+    <TextView
+        android:id="@+id/teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/teacher_name"
+        android:textColor="@color/semi_black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/teacher_gender"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center_horizontal"
+        android:text="@string/class_is"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/teacher_name" />
+
+    <TextView
+        android:id="@+id/class_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/class_time"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/class_scedule_title_id" />
+
+    <TextView
+        android:id="@+id/today_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/today_is_title"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/class_time" />
+
+    <TextView
+        android:id="@+id/today_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/today_is"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/today_title"
+        app:layout_constraintTop_toBottomOf="@+id/class_time" />
+
+    <TextView
+        android:id="@+id/am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/am_or_pm"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/class_time"
+        app:layout_constraintTop_toTopOf="@+id/class_time" />
+
+
+    <TextView
+        android:id="@+id/classGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/class_going"
+        android:textColor="@color/blurry_white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/class_scedule_background_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/all_class_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/all_class_title"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/class_scedule_background_button"
+        app:layout_constraintTop_toBottomOf="@+id/class_scedule_background_button" />
+
+
+    <ImageView
+        android:id="@+id/ic_blue_01"
+        android:layout_width="171dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_class_title"
+        app:srcCompat="@drawable/ic_blue_background" />
+
+    <ImageView
+        android:id="@+id/ic_blue_02"
+        android:layout_width="194dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_blue_01"
+        app:layout_constraintStart_toEndOf="@+id/ic_blue_01"
+        app:srcCompat="@drawable/ic_blue_background" />
+
+    <TextView
+        android:id="@+id/blue_first_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_TIME"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/ic_blue_01"
+        app:layout_constraintTop_toTopOf="@+id/ic_blue_01" />
+
+    <TextView
+        android:id="@+id/blue_first_clock_am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_AM_PM"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/blue_first_clock_time"
+        app:layout_constraintTop_toTopOf="@+id/ic_blue_01" />
+
+    <ImageView
+        android:id="@+id/blue_teachers_dock"
+        android:layout_width="63dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_blue_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_blue_02"
+        app:srcCompat="@drawable/ic_teachers_background_holder" />
+
+    <ImageView
+        android:id="@+id/blue_teacher_gender"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_blue_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_blue_02"
+        app:srcCompat="@drawable/ic_teacher_male" />
+
+    <TextView
+        android:id="@+id/blue_teacher_name"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center_horizontal"
+        android:text="@string/MCLASS_TEACHER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/blue_teachers_dock"
+        app:layout_constraintTop_toTopOf="@+id/ic_blue_02" />
+
+    <TextView
+        android:id="@+id/blue_class_is"
+        android:layout_width="86dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_CLASS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/blue_teachers_dock"
+        app:layout_constraintTop_toBottomOf="@+id/blue_teacher_name" />
+
+
+    <ImageView
+        android:id="@+id/ic_green_01"
+        android:layout_width="171dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_blue_01"
+        app:srcCompat="@drawable/ic_green_background" />
+
+    <ImageView
+        android:id="@+id/ic_green_02"
+        android:layout_width="194dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_green_01"
+        app:layout_constraintStart_toEndOf="@+id/ic_green_01"
+        app:srcCompat="@drawable/ic_green_background" />
+
+    <TextView
+        android:id="@+id/green_first_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_TIME"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/ic_green_01"
+        app:layout_constraintTop_toTopOf="@+id/ic_green_01" />
+
+    <TextView
+        android:id="@+id/green_first_clock_am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_AM_PM"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/green_first_clock_time"
+        app:layout_constraintTop_toTopOf="@+id/ic_green_01" />
+
+    <ImageView
+        android:id="@+id/green_teachers_dock"
+        android:layout_width="63dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_green_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_green_02"
+        app:srcCompat="@drawable/ic_teachers_background_holder" />
+
+    <ImageView
+        android:id="@+id/green_teacher_gender"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_green_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_green_02"
+        app:srcCompat="@drawable/ic_teacher_male" />
+
+    <TextView
+        android:id="@+id/green_teacher_name"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center_horizontal"
+        android:text="@string/MCLASS_TEACHER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/green_teachers_dock"
+        app:layout_constraintTop_toTopOf="@+id/ic_green_02" />
+
+    <TextView
+        android:id="@+id/green_class_is"
+        android:layout_width="86dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_CLASS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/green_teachers_dock"
+        app:layout_constraintTop_toBottomOf="@+id/green_teacher_name" />
+
+
+    <ImageView
+        android:id="@+id/ic_orange_01"
+        android:layout_width="171dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_green_01"
+        app:srcCompat="@drawable/ic_orange_background" />
+
+    <ImageView
+        android:id="@+id/ic_orange_02"
+        android:layout_width="194dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_orange_01"
+        app:layout_constraintStart_toEndOf="@+id/ic_orange_01"
+        app:srcCompat="@drawable/ic_orange_background" />
+
+    <TextView
+        android:id="@+id/orange_first_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_TIME"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/ic_orange_01"
+        app:layout_constraintTop_toTopOf="@+id/ic_orange_01" />
+
+    <TextView
+        android:id="@+id/orange_first_clock_am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_AM_PM"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/orange_first_clock_time"
+        app:layout_constraintTop_toTopOf="@+id/ic_orange_01" />
+
+    <ImageView
+        android:id="@+id/orange_teachers_dock"
+        android:layout_width="63dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_orange_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_orange_02"
+        app:srcCompat="@drawable/ic_teachers_background_holder" />
+
+    <ImageView
+        android:id="@+id/orange_teacher_gender"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_orange_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_orange_02"
+        app:srcCompat="@drawable/ic_teacher_male" />
+
+    <TextView
+        android:id="@+id/orange_teacher_name"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center_horizontal"
+        android:text="@string/MCLASS_TEACHER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/orange_teachers_dock"
+        app:layout_constraintTop_toTopOf="@+id/ic_orange_02" />
+
+    <TextView
+        android:id="@+id/orange_class_is"
+        android:layout_width="86dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_CLASS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/orange_teachers_dock"
+        app:layout_constraintTop_toBottomOf="@+id/orange_teacher_name" />
+
+
+    <ImageView
+        android:id="@+id/ic_yellow_01"
+        android:layout_width="171dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_orange_01"
+        app:srcCompat="@drawable/ic_yellow_background" />
+
+    <ImageView
+        android:id="@+id/ic_yellow_02"
+        android:layout_width="194dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_yellow_01"
+        app:layout_constraintStart_toEndOf="@+id/ic_yellow_01"
+        app:srcCompat="@drawable/ic_yellow_background" />
+
+    <TextView
+        android:id="@+id/yellow_first_clock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_TIME"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/ic_yellow_01"
+        app:layout_constraintTop_toTopOf="@+id/ic_yellow_01" />
+
+    <TextView
+        android:id="@+id/yellow_first_clock_am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_AM_PM"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/yellow_first_clock_time"
+        app:layout_constraintTop_toTopOf="@+id/ic_yellow_01" />
+
+    <ImageView
+        android:id="@+id/yellow_teachers_dock"
+        android:layout_width="63dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_yellow_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_yellow_02"
+        app:srcCompat="@drawable/ic_teachers_background_holder" />
+
+    <ImageView
+        android:id="@+id/yellow_teacher_gender"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_yellow_02"
+        app:layout_constraintTop_toTopOf="@+id/ic_yellow_02"
+        app:srcCompat="@drawable/ic_teacher_male" />
+
+    <TextView
+        android:id="@+id/yellow_teacher_name"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center_horizontal"
+        android:text="@string/MCLASS_TEACHER"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/yellow_teachers_dock"
+        app:layout_constraintTop_toTopOf="@+id/ic_yellow_02" />
+
+    <TextView
+        android:id="@+id/yellow_class_is"
+        android:layout_width="86dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/MCLASS_CLASS"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/yellow_teachers_dock"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_teacher_name" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

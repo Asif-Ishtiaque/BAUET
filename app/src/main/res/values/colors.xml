@@ -9,5 +9,21 @@
     <color name="white">#FFFFFFFF</color>
     <color name="semi_white">#F1F5F5</color>
     <color name="semi_black">#59000000</color>
+    <color name="err_black">#598E8E8E</color>
     <color name="yellow">#FCBD2B</color>
+    <color name="semi_transparent">#BFFFFFFF</color>
+    <color name="blue">#87C3FF</color>
+    <color name="green">#13B18B</color>
+    <color name="orange">#FC722B</color>
+    <color name="blurry_white">#DEFFFFFF</color>
+    <color name="feddish_blue1">#ABDEE8</color>
+    <color name="feddish_red">#EF916E</color>
+    <color name="Deep_Blue">#4998FF</color>
+    <color name="Reddish">#CCEE7346</color>
+    <color name="Purple">#7A25FB</color>
+    <color name="Transparent_White">#80FFFFFF</color>
+
+
+
+
 </resources>

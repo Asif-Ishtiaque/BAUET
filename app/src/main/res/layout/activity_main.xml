@@ -4,54 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/semi_white"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/Logo_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ic_logo_bg"
-        android:elevation="5dp"
-        android:fontFamily="@font/product_sans"
-        android:text="@string/app_name"
-        android:textColor="@color/semi_black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="lollipop" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@android:color/transparent"
-        android:scaleX=".5"
-        android:scaleY=".5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Logo_app"
-        app:srcCompat="@drawable/ic_appsettings" />
 
     <TextView
         android:id="@+id/Welcome_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/Welcome_Title"
-        android:textColor="@color/semi_black"
-        android:textSize="30sp"
+        android:textColor="@color/blurry_white"
+        android:textSize="33sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo_app" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Welcome_user_name"
@@ -61,13 +29,13 @@
         android:layout_marginLeft="10dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/welcome_user_name"
-        android:textColor="@color/semi_black"
-        android:textSize="30sp"
+        android:textColor="@color/blurry_white"
+        android:textSize="33sp"
         app:layout_constraintBottom_toBottomOf="@+id/Welcome_user"
         app:layout_constraintStart_toEndOf="@+id/Welcome_user" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/user_button"
         android:layout_width="36dp"
         android:layout_height="41dp"
         android:layout_marginEnd="16dp"
@@ -82,12 +50,11 @@
         android:id="@+id/batch_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/batch_title"
-        android:textColor="@color/semi_black"
+        android:textColor="@color/blurry_white"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Welcome_user" />
@@ -100,7 +67,7 @@
         android:layout_marginLeft="5dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/batch_name"
-        android:textColor="@color/semi_black"
+        android:textColor="@color/blurry_white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/batch_title"
         app:layout_constraintStart_toEndOf="@+id/batch_title" />
@@ -108,17 +75,14 @@
     <!--Category Started-->
 
 
-
-
     <!--Class Scedule Block Start-->
 
     <ImageButton
         android:id="@+id/class_scedule_button"
-        android:layout_width="191dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="178dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/batch_name"
@@ -126,8 +90,8 @@
 
     <ImageView
         android:id="@+id/clock_image"
-        android:layout_width="46dp"
-        android:layout_height="47dp"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         app:layout_constraintStart_toStartOf="@+id/class_scedule_button"
@@ -135,7 +99,7 @@
         app:srcCompat="@drawable/ic_clock" />
 
     <TextView
-        android:id="@+id/class_scedule_title"
+        android:id="@+id/class_scedule_title_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
@@ -152,12 +116,13 @@
         android:id="@+id/Today_is_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/today_is_title"
         android:textColor="@color/white"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/clock_image"
         app:layout_constraintTop_toTopOf="@+id/class_scedule_button" />
 
@@ -169,6 +134,7 @@
         android:layout_marginLeft="3dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/today_is"
+        android:textSize="12sp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/Today_is_title"
         app:layout_constraintStart_toEndOf="@+id/Today_is_title" />
@@ -177,27 +143,26 @@
         android:id="@+id/class_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/class_time"
         android:textColor="@color/white"
-        android:textSize="85sp"
+        android:textSize="57sp"
         app:layout_constraintStart_toStartOf="@+id/class_scedule_button"
         app:layout_constraintTop_toBottomOf="@+id/clock_image" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/AM_PM_IT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/am_or_pm"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/class_time"
         app:layout_constraintTop_toTopOf="@+id/class_time" />
 
@@ -205,9 +170,9 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/class_is"
         android:textColor="@color/white"
@@ -216,7 +181,171 @@
         app:layout_constraintTop_toBottomOf="@+id/class_time" />
 
 
-    <!--Class Scedule Block End-->
+
+
+    <ImageView
+        android:id="@+id/WeatherView"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/batch_title"
+        app:layout_constraintStart_toStartOf="@+id/batch_title"
+        app:srcCompat="@drawable/cloudy2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/weather_show"
+        android:textColor="@color/blurry_white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/batch_title"
+        app:layout_constraintStart_toEndOf="@+id/WeatherView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/weather_extension"
+        android:textColor="@color/blurry_white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="@+id/batch_title"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/weather_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/weather_location"
+        android:textColor="@color/blurry_white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/clock_image"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/book_reader_button"
+        android:layout_width="178dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/class_scedule_button"
+        app:layout_constraintTop_toBottomOf="@+id/class_scedule_button"
+        app:srcCompat="@drawable/ic_card_background_blue" />
+
+    <ImageButton
+        android:id="@+id/chat_system_button"
+        android:layout_width="178dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/book_reader_button"
+        app:layout_constraintTop_toBottomOf="@+id/book_reader_button"
+        app:srcCompat="@drawable/ic_card_background_feddish_blue" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="178dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/class_scedule_button"
+        app:layout_constraintTop_toTopOf="@+id/class_scedule_button"
+        app:srcCompat="@drawable/ic_card_background_deep_blue" />
+
+
+    <ImageView
+        android:id="@+id/iamge_exam_system"
+        android:layout_width="178dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="12dp"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_card_background_white" />
+
+    <ImageView
+        android:id="@+id/inner_iamge_exam_system"
+        android:layout_width="158dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/iamge_exam_system"
+        app:layout_constraintTop_toTopOf="@+id/iamge_exam_system"
+        app:srcCompat="@drawable/ic_card_background_inner_card" />
+
+    <ImageButton
+        android:id="@+id/exam_system_button"
+        android:layout_width="158dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/iamge_exam_system"
+        app:layout_constraintTop_toBottomOf="@+id/inner_iamge_exam_system"
+        app:srcCompat="@drawable/ic_card_background_deep_blue" />
+
+
+    <ImageButton
+        android:id="@+id/teacher_studemt_system_button"
+        android:layout_width="178dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/iamge_exam_system"
+        app:layout_constraintTop_toBottomOf="@+id/iamge_exam_system"
+        app:srcCompat="@drawable/ic_card_background_reddish" />
+
+    <ImageButton
+        android:id="@+id/notice_board_system"
+        android:layout_width="178dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
+        app:layout_constraintTop_toBottomOf="@+id/teacher_studemt_system_button"
+        app:srcCompat="@drawable/ic_card_background_purple" />
+
+
+
+    <!--Chat System-->
+
+    <ImageView
+        android:id="@+id/chat"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/chat_system_button"
+        app:layout_constraintTop_toTopOf="@+id/chat_system_button"
+        app:srcCompat="@drawable/ic_chat" />
+
+    <TextView
+        android:id="@+id/bChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/bChat"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chat"
+        app:layout_constraintStart_toEndOf="@+id/chat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

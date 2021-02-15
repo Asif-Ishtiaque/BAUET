@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/bauet_logo"
+        android:layout_width="290dp"
+        android:layout_height="266dp"
+        android:layout_marginStart="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bauet" />
+
+
+    <TextView
+        android:id="@+id/Welcome_user"
+        android:layout_width="313dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="37dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Welcome_Login_Title"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bauet_logo" />
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="63dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/EMAIL"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Welcome_user"
+        app:layout_constraintTop_toBottomOf="@+id/Welcome_user" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="87dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/PASSWORD"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/login_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_email" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ImageButton
+        android:id="@+id/Login"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:srcCompat="@drawable/ic_login_register" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="87dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Login"
+        app:layout_constraintTop_toTopOf="@+id/Login" />
+
+    <Button
+        android:id="@+id/signUP"
+        android:layout_width="337dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:text="@string/signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login" />
+
+    <ImageButton
+        android:id="@+id/kkkk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUP"
+        app:srcCompat="@drawable/ic_user" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
