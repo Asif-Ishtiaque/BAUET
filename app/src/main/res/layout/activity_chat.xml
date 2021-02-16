@@ -20,14 +20,14 @@
 
     <ImageView
         android:id="@+id/profile_picture_login"
-        android:layout_width="43dp"
-        android:layout_height="43dp"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
         android:layout_above="@+id/imageView4"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="-47dp"
         android:translationX="-165dp"
-        android:translationY="16dp"
+        android:translationY="13dp"
         app:srcCompat="@drawable/ic_chat" />
 
     <ImageView
@@ -75,13 +75,29 @@
         android:translationX="-100dp"
         android:translationY="17dp" />
 
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="368dp"
+        android:layout_height="665dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:translationY="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+
     <ListView
         android:id="@+id/chatView"
-        android:layout_width="398dp"
-        android:layout_height="730dp"
+        android:layout_width="342dp"
+        android:layout_height="664dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp" />
+        android:layout_marginBottom="65dp"
+        android:fontFamily="@font/product_sans"
+        android:translationX="-5dp"
+        android:translationY="2dp" />
 
     <LinearLayout
         android:id="@+id/listFooter"

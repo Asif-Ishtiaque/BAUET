@@ -32,6 +32,8 @@
     <string name="WEDNESDAY_SECOND_CLASS">9:16</string>
     <string name="WEDNESDAY_THIRD_CLASS">10:42</string>
 
+    <string name="chat_time">00.00 AM</string>
+
 
     <string name="MCLASS_TIME">00.00</string>
     <string name="MCLASS_AM_PM">AM</string>
