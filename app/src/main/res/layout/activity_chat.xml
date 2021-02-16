@@ -21,30 +21,59 @@
     <ImageView
         android:id="@+id/profile_picture_login"
         android:layout_width="43dp"
-        android:layout_height="50dp"
+        android:layout_height="43dp"
         android:layout_above="@+id/imageView4"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="-47dp"
-        android:translationX="-150dp"
-        android:translationY="15dp"
-        app:srcCompat="@drawable/ic_user" />
+        android:translationX="-165dp"
+        android:translationY="16dp"
+        app:srcCompat="@drawable/ic_chat" />
+
+    <ImageView
+        android:id="@+id/user_active"
+        android:layout_width="10dp"
+        android:layout_height="43dp"
+        android:layout_above="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="-47dp"
+        android:translationX="-40dp"
+        android:translationY="16dp"
+        app:srcCompat="@drawable/ic_inactive" />
+
+
+    <TextView
+        android:id="@+id/active_user"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="-47dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/user_name"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        android:translationX="65dp"
+        android:translationY="22dp" />
+
+
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/product_sans"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
         android:layout_marginBottom="-47dp"
-        android:translationX="-85dp"
-        android:translationY="14dp"
+        android:fontFamily="@font/product_sans"
         android:text="@string/bChat"
         android:textColor="@color/blurry_white"
         android:textSize="30sp"
-       />
+        android:translationX="-100dp"
+        android:translationY="17dp" />
 
     <ListView
         android:id="@+id/chatView"

@@ -73,13 +73,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        ImageButton p= (ImageButton) findViewById(R.id.kkkk);
-        p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uuu();
-            }
-        });
+
 
 
 
