@@ -168,6 +168,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton exam_button = (ImageButton) findViewById(R.id.exam_system_button);
+        exam_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exam_activity();
+            }
+        });
+
+
+
     }
 
     //Class Scedule Activity Opener
@@ -182,6 +192,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //Exam Menu Opener
+
+    protected  void exam_activity()
+    {
+        Intent intent = new Intent(this, exam.class);
+        startActivity(intent);
+    }
 
 
 

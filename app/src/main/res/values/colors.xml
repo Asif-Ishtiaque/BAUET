@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="semi_white">#F1F5F5</color>
     <color name="semi_black">#59000000</color>
+    <color name="d_black">#59AAAAAA</color>
     <color name="err_black">#598E8E8E</color>
     <color name="yellow">#FCBD2B</color>
     <color name="semi_transparent">#BFFFFFFF</color>

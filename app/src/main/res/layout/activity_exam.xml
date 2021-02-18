@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_normal_bubble"
+    tools:context=".exam">
+
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Hello"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/author_exam"
+        android:layout_width="259dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/author"
+        android:textColor="@color/semi_black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+
+
+
+    <ImageView
+        android:id="@+id/exM_shortheader"
+        android:layout_width="351dp"
+        android:layout_height="253dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_exam"
+        app:srcCompat="@drawable/ic_exama_short_board" />
+
+
+    <TextView
+        android:id="@+id/gan_gan"
+        android:layout_width="302dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/satisfy"
+        android:text="@string/quotes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/exM_shortheader"
+        app:layout_constraintTop_toTopOf="@+id/exM_shortheader" />
+
+    <ImageView
+        android:id="@+id/pdf_header"
+        android:layout_width="193dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Exam_title"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+    <ImageView
+        android:id="@+id/pdf_header_2"
+        android:layout_width="151dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/pdf_header"
+        app:layout_constraintStart_toEndOf="@+id/pdf_header"
+        app:layout_constraintTop_toBottomOf="@+id/exM_shortheader"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+
+    <ImageView
+        android:id="@+id/pdf_hiamge"
+        android:layout_width="134dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_pdf"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header"
+        app:layout_constraintTop_toTopOf="@+id/pdf_header" />
+
+    <TextView
+        android:id="@+id/pdf_name"
+        android:layout_width="132dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/pdf_name"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header"
+        app:layout_constraintTop_toBottomOf="@+id/pdf_hiamge" />
+
+
+    <TextView
+        android:id="@+id/exam_name"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Exam_Name"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header_2"
+        app:layout_constraintTop_toTopOf="@+id/pdf_header_2" />
+
+    <TextView
+        android:id="@+id/exam_start"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Exam_Start"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header_2"
+        app:layout_constraintTop_toBottomOf="@+id/exam_name" />
+
+    <TextView
+        android:id="@+id/exam_end"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Exam_End"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header_2"
+        app:layout_constraintTop_toBottomOf="@+id/exam_start" />
+
+
+    <ImageView
+        android:id="@+id/time_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/ic_timer"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/exam_name"
+        app:layout_constraintTop_toTopOf="@+id/pdf_header_2" />
+
+
+    <TextView
+        android:id="@+id/Exam_title"
+        android:layout_width="202dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/r_exam"
+        android:textColor="@color/semi_black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/exM_shortheader"
+        app:layout_constraintTop_toBottomOf="@+id/exM_shortheader" />
+
+    <EditText
+        android:id="@+id/upload_pdf"
+        android:layout_width="197dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_chat_header"
+        android:hint="@string/select_pdf"
+        android:fontFamily="@font/product_sans"
+        android:textSize="15sp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/pdf_header"
+        app:layout_constraintTop_toBottomOf="@+id/pdf_name" />
+
+    <ImageButton
+        android:id="@+id/upload_button"
+        android:layout_width="148dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/upload_pdf"
+        app:layout_constraintStart_toEndOf="@+id/upload_pdf"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+    <ImageView
+        android:id="@+id/upload"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ic_upload"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/upload_button"
+        app:layout_constraintTop_toTopOf="@+id/upload_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

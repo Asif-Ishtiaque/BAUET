@@ -74,8 +74,24 @@
 
 
     <string name="prompt_msg">Write Anything</string>
+    <string name="r_exam">Running Exam</string>
+    <string name="quotes">“Never do tomorrow what you can do today. Procrastination is the thief of time.” – Charles Dickens ‘David Copperfield’</string>
 
 
+    <string name="test_title">Class Test</string>
+    <string name="Hello">Hello</string>
+    <string name="pdf_name">19104013_math.pdf</string>
+
+    <string name="Exam_Name">Math:2247</string>
+    <string name="Exam_Start">11:40 AM</string>
+    <string name="Exam_End">12:35 PM</string>
+
+
+    <string name="test_name">Math-2247</string>
+    <string name="upload">UPLOAD</string>
+    <string name="enter_exam">Enter Test Zone</string>
+    <string name="today_exam_title">Todays Class Test</string>
+    <string name="select_pdf">Select Pdf From Storage</string>
 
 
 </resources>

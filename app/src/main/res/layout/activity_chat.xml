@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/ic_normal_bubble"
     tools:context=".Chat">
 
 
@@ -53,7 +53,7 @@
         android:layout_marginBottom="-47dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/user_name"
-        android:textColor="@color/blurry_white"
+        android:textColor="@color/semi_black"
         android:textSize="20sp"
         android:translationX="65dp"
         android:translationY="22dp" />
@@ -70,7 +70,7 @@
         android:layout_marginBottom="-47dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/bChat"
-        android:textColor="@color/blurry_white"
+        android:textColor="@color/semi_black"
         android:textSize="30sp"
         android:translationX="-100dp"
         android:translationY="17dp" />
@@ -78,8 +78,8 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="368dp"
-        android:layout_height="665dp"
+        android:layout_width="366dp"
+        android:layout_height="655dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:translationY="60dp"
@@ -90,14 +90,14 @@
 
     <ListView
         android:id="@+id/chatView"
-        android:layout_width="342dp"
-        android:layout_height="664dp"
+        android:layout_width="336dp"
+        android:layout_height="633dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="94dp"
         android:fontFamily="@font/product_sans"
         android:translationX="-5dp"
-        android:translationY="2dp" />
+        android:translationY="15dp" />
 
     <LinearLayout
         android:id="@+id/listFooter"
@@ -126,7 +126,7 @@
             android:maxLines="1"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textColorHint="@color/semi_white"
+            android:textColorHint="@color/semi_black"
             tools:ignore="RtlCompat" />
 
         <ImageButton
