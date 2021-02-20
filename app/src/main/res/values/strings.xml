@@ -4,7 +4,7 @@
     <string name="Welcome_Login_Title">Welcome Back Login in to Your Account</string>
     <string name="welcome_user_name">Fardin</string>
     <string name="batch_title">Batch:</string>
-    <string name="batch_name">9TH</string>
+    <string name="batch_name">__</string>
     <string name="class_schedule_title">Class Card</string>
 
     <string name="class_going">Next Class / Ongoing Class</string>
@@ -86,8 +86,20 @@
     <string name="Exam_Start">11:40 AM</string>
     <string name="Exam_End">12:35 PM</string>
 
+    <string name="id_field">______</string>
+
+    <string name="chat_active_name">__________</string>
+
+
+
 
     <string name="test_name">Math-2247</string>
+    <string name="ID">ID</string>
+    <string name="YS">Year and Semester</string>
+    <string name="ys_hints">1st Year 1st Semester</string>
+    <string name="ys_data">1st Year 1st Semester</string>
+    <string name="Department">Department</string>
+    <string name="Batch">Batch</string>
     <string name="upload">UPLOAD</string>
     <string name="enter_exam">Enter Test Zone</string>
     <string name="today_exam_title">Todays Class Test</string>

@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/bauet_logo"
-        android:layout_width="290dp"
-        android:layout_height="266dp"
+        android:layout_width="283dp"
+        android:layout_height="172dp"
         android:layout_marginStart="58dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,7 +27,7 @@
         android:text="@string/registerTitle"
         android:textAlignment="center"
         android:textColor="@color/blurry_white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bauet_logo" />
 
@@ -45,18 +45,19 @@
         app:layout_constraintStart_toStartOf="@+id/Welcome_user"
         app:layout_constraintTop_toBottomOf="@+id/Welcome_user" />
 
+
     <EditText
         android:id="@+id/login_email"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="38dp"
+        android:layout_width="321dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/ic_login_register"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_email" />
-
 
     <TextView
         android:id="@+id/register_username_title"
@@ -74,9 +75,9 @@
 
     <EditText
         android:id="@+id/register_username"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="38dp"
+        android:layout_width="321dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
         android:background="@drawable/ic_login_register"
         android:ems="10"
         android:inputType="text"
@@ -98,11 +99,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_username" />
 
+
     <EditText
         android:id="@+id/register_password"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="38dp"
+        android:layout_width="321dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
         android:background="@drawable/ic_login_register"
         android:ems="10"
         android:inputType="textPassword"
@@ -110,24 +112,139 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="31dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/ID"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+
+
+    <EditText
+        android:id="@+id/eneter_ID"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID" />
+
+
+    <TextView
+        android:id="@+id/YEAR_SEMSTER"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/YS"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ID"
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+
+
+    <EditText
+        android:id="@+id/YEAR_SEMSTER_BA"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:hint="@string/ys_hints"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/eneter_ID"
+        app:layout_constraintTop_toBottomOf="@+id/YEAR_SEMSTER" />
+
+
+    <TextView
+        android:id="@+id/Department"
+        android:layout_width="110dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Department"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eneter_ID" />
+
+
+    <EditText
+        android:id="@+id/Department_Filed"
+        android:layout_width="135dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Department" />
+
+
+    <TextView
+        android:id="@+id/batch"
+        android:layout_width="71dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Batch"
+        android:textAlignment="center"
+        android:textColor="@color/blurry_white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Department"
+        app:layout_constraintTop_toBottomOf="@+id/YEAR_SEMSTER_BA" />
+
+    <EditText
+        android:id="@+id/batch_filed"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Department_Filed"
+        app:layout_constraintTop_toBottomOf="@+id/batch" />
+
     <ImageButton
         android:id="@+id/registration_confirm"
         android:layout_width="121dp"
         android:layout_height="45dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="16dp"
-        android:onClick="signUp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
+        android:onClick="signUp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_password"
+        app:layout_constraintTop_toBottomOf="@+id/batch_filed"
         app:srcCompat="@drawable/ic_login_register" />
 
     <TextView
         android:id="@+id/register_text"
         android:layout_width="87dp"
         android:layout_height="24dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/Register"
         android:textAlignment="center"
@@ -140,8 +257,8 @@
         android:id="@+id/signUP"
         android:layout_width="337dp"
         android:layout_height="92dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="1dp"
         android:background="@android:color/transparent"
         android:text="@string/regDone"
         app:layout_constraintStart_toStartOf="parent"

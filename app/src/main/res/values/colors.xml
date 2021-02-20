@@ -23,6 +23,8 @@
     <color name="Reddish">#CCEE7346</color>
     <color name="Purple">#7A25FB</color>
     <color name="Transparent_White">#80FFFFFF</color>
+    <color name="dimen_white">#C7FEFEFE</color>
+    <color name="bad_red">#C77D6161</color>
 
 
 

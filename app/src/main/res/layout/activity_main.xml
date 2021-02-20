@@ -33,10 +33,9 @@
 
     <TextView
         android:id="@+id/Welcome_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="33dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/welcome_user_name"
         android:textColor="@color/semi_black"
@@ -60,7 +59,7 @@
         android:id="@+id/batch_title"
         android:layout_width="35dp"
         android:layout_height="13dp"
-        android:layout_marginStart="21dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/batch_title"
@@ -81,10 +80,36 @@
         app:layout_constraintBottom_toBottomOf="@+id/batch_title"
         app:layout_constraintStart_toEndOf="@+id/batch_title" />
 
+
+    <TextView
+        android:id="@+id/apner_id_ti_bolun_title"
+        android:layout_width="18dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/ID"
+        android:textColor="@color/semi_black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/batch_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
     <!--Category Started-->
 
 
     <!--Class Scedule Block Start-->
+
+    <TextView
+        android:id="@+id/apner_id_ti_bolun_field"
+        android:layout_width="50dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/id_field"
+        android:textColor="@color/semi_black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/apner_id_ti_bolun_title"
+        app:layout_constraintTop_toBottomOf="@+id/weather_location" />
 
     <ImageButton
         android:id="@+id/class_scedule_button"
@@ -190,15 +215,13 @@
         app:layout_constraintTop_toBottomOf="@+id/class_time" />
 
 
-
-
     <ImageView
         android:id="@+id/WeatherView"
         android:layout_width="29dp"
         android:layout_height="29dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toTopOf="@+id/batch_title"
-        app:layout_constraintStart_toStartOf="@+id/batch_title"
+        app:layout_constraintStart_toStartOf="@+id/header"
         app:srcCompat="@drawable/cloudy2" />
 
     <TextView
@@ -250,6 +273,7 @@
         app:layout_constraintTop_toBottomOf="@+id/class_scedule_button"
         app:srcCompat="@drawable/ic_card_background_blue" />
 
+
     <ImageButton
         android:id="@+id/chat_system_button"
         android:layout_width="178dp"
@@ -268,10 +292,10 @@
         android:layout_marginEnd="20dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toEndOf="@+id/class_scedule_button"
         app:layout_constraintTop_toTopOf="@+id/class_scedule_button"
         app:srcCompat="@drawable/ic_card_background_deep_blue" />
-
 
     <ImageView
         android:id="@+id/iamge_exam_system"
@@ -402,9 +426,9 @@
     <TextView
         android:id="@+id/exam_enter"
         android:layout_width="143dp"
-        android:layout_height="47dp"
+        android:layout_height="28dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/enter_exam"
         android:textAlignment="center"
@@ -414,12 +438,86 @@
         app:layout_constraintTop_toTopOf="@+id/exam_system_button" />
 
 
+    <!--Year and Semester-->
 
 
+    <TextView
+        android:id="@+id/ys"
+        android:layout_width="121dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/ys_data"
+        android:textAlignment="center"
+        android:textColor="@color/dimen_white"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/degree"
+        android:layout_width="35dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/ys"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_degree" />
 
 
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="157dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_login_register"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/chat_system_button"
+        app:layout_constraintTop_toBottomOf="@+id/bChat" />
 
 
+    <ImageView
+        android:id="@+id/user_active"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:translationX="-40dp"
+        android:translationY="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/register_username"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toStartOf="@+id/register_username"
+        app:layout_constraintTop_toBottomOf="@+id/chat"
+        app:srcCompat="@drawable/ic_active" />
 
+    <ImageView
+        android:id="@+id/student"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/register_username"
+        app:layout_constraintTop_toTopOf="@+id/register_username"
+        app:srcCompat="@drawable/ic_student" />
+
+
+    <TextView
+        android:id="@+id/chat_active_name"
+        android:layout_width="102dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/chat_active_name"
+        android:textColor="@color/semi_black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/student"
+        app:layout_constraintTop_toTopOf="@+id/register_username" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

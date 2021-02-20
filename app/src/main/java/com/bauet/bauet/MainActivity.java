@@ -134,8 +134,16 @@ public class MainActivity extends AppCompatActivity {
         weather_icons = findViewById(R.id.WeatherView);
          temp = findViewById(R.id.textView);
 
+
+
+
+
+
+
+
        //Pulling from Local Saved Data and Showing in main Menu
         setUpDisplayName();
+        dataUI();
 
 
        //Full Screen
@@ -180,6 +188,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+    protected void dataUI()
+    {
+        TextView mbatch;
+        TextView mid;
+        TextView mys;
+
+        mbatch = (TextView)findViewById(R.id.batch_name);
+        mid = (TextView)findViewById(R.id.apner_id_ti_bolun_field);
+        mys = (TextView)findViewById(R.id.ys);
+
+        SharedPreferences fardin =  getApplicationContext().getSharedPreferences("UserRegisterPers",Context.MODE_PRIVATE);
+        String id =fardin.getString("idLS","");
+        String batch =fardin.getString("batchLS","");
+        String ys =fardin.getString("ysLS","");
+
+
+        mbatch.setText(batch);
+        mid.setText(id);
+        mys.setText(ys);
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
     //Class Scedule Activity Opener
     protected void ClassScedule_ActivityOpener() {
         Intent intent = new Intent(this, class_scedule_back.class);
@@ -199,6 +243,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, exam.class);
         startActivity(intent);
     }
+
+
 
 
 
@@ -264,6 +310,7 @@ public class MainActivity extends AppCompatActivity {
     private void setUpDisplayName()
     {
         TextView username_text_field =(TextView) findViewById(R.id.Welcome_user_name);
+        TextView chat_actie_user =(TextView) findViewById(R.id.chat_active_name);
 
         SharedPreferences perfs =  getSharedPreferences(Register.CHAT_PREFS, MODE_PRIVATE);
         mDisplayName = perfs.getString(Register.DISPLAY_NAME_KEY,null);
@@ -274,6 +321,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
               username_text_field.setText(mDisplayName);
+              chat_actie_user.setText(mDisplayName);
         }
     }
 

@@ -28,7 +28,9 @@ public class pdviewer extends AppCompatActivity {
     private PDFView mPDFView;
     private TextView codV;
     private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference mDatabaseReference =mDatabase.getReference("url");
+    DatabaseReference mDatabaseReference =mDatabase.getReference("PDF ANSWER SHEET");
+    DatabaseReference mChild =  mDatabaseReference.child("-MTxrTXwqh5ZZ5n5Fk5m");
+    DatabaseReference urlRead = mChild.child("url");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,8 @@ public class pdviewer extends AppCompatActivity {
         mPDFView =(PDFView)findViewById(R.id.pdfView);
         codV = (TextView) findViewById(R.id.textP);
 
-        mDatabaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
+        urlRead.addValueEventListener(new ValueEventListener() {
+             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String value = snapshot.getValue(String.class);
                 codV.setText(value);

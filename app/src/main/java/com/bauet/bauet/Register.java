@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -37,6 +38,11 @@ public class Register extends AppCompatActivity {
     private EditText mUsernameView;
     private EditText mPasswordView;
 
+    private EditText mID;
+    private EditText mYS;
+    private EditText mDepartment;
+    private EditText mBatch;
+
 
     // Firebase instance variables
 
@@ -60,6 +66,11 @@ private FirebaseAuth mAuth;
         mEmailView = (EditText) findViewById(R.id.login_email);
         mPasswordView = (EditText) findViewById(R.id.register_password);
         mUsernameView = (EditText) findViewById(R.id.register_username);
+
+        mID = (EditText) findViewById(R.id.eneter_ID) ;
+        mYS = (EditText) findViewById(R.id.YEAR_SEMSTER_BA) ;
+        mDepartment = (EditText) findViewById(R.id.Department_Filed) ;
+        mBatch = (EditText) findViewById(R.id.batch_filed) ;
 
 
         // Keyboard sign in action
@@ -207,6 +218,7 @@ private FirebaseAuth mAuth;
                {
                    //Saved Username Locally
                    savedDisplayName();
+                   savedTOInformationMVC();
                    //After Suceessfuly Registering it will go back to Login Activity
                    Intent intent = new Intent(Register.this,Login.class);
                    finish();
@@ -239,6 +251,27 @@ private FirebaseAuth mAuth;
        perfs.edit().putString(DISPLAY_NAME_KEY,username).apply();
    }
 
+
+    private void savedTOInformationMVC()
+    {
+
+        String ID = mID.getText().toString();
+        String YS = mYS.getText().toString();
+        String Dept = mDepartment.getText().toString();
+        String Batch = mBatch.getText().toString();
+
+        SharedPreferences mSharedPreferences =getSharedPreferences("UserRegisterPers", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.putString("idLS",ID);
+        editor.putString("ysLS",YS);
+        editor.putString("deptLS",Dept);
+        editor.putString("batchLS",Batch);
+        editor.commit();
+        Toast.makeText(Register.this, "Data Saved", Toast.LENGTH_SHORT).show();
+
+
+
+    }
 
 
 
