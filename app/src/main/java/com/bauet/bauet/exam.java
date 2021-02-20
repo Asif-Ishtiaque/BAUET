@@ -32,6 +32,7 @@ public class exam extends AppCompatActivity {
     ImageButton upload_button;
      StorageReference mStorageReference;
      DatabaseReference mDatabaseReference;
+     ImageButton equestion_button;
 
 
 
@@ -57,7 +58,23 @@ public class exam extends AppCompatActivity {
                 fileselection();
             }
         });
+
+
+        equestion_button = (ImageButton) findViewById(R.id.pdf_hiamge);
+        equestion_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pdf_activity();
+            }
+        });
     }
+
+    protected  void pdf_activity()
+    {
+        Intent intent = new Intent(this, pdviewer.class);
+        startActivity(intent);
+    }
+
 
 
     private  void fileselection()

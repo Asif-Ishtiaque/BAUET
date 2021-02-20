@@ -106,7 +106,7 @@
         app:srcCompat="@drawable/ic_chat_header" />
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/pdf_hiamge"
         android:layout_width="134dp"
         android:layout_height="152dp"
