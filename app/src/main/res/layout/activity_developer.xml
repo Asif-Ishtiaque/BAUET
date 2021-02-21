@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_developer"
+    tools:context=".developer">
+
+    <ImageView
+        android:id="@+id/notice_image"
+        android:layout_width="370dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="247dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/about_developer"
+        android:textColor="@color/semi_black"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/developer_image"
+        app:layout_constraintTop_toTopOf="@+id/notice_image" />
+
+    <ImageView
+        android:id="@+id/developer_image"
+        android:layout_width="67dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/notice_image"
+        app:layout_constraintTop_toTopOf="@+id/notice_image"
+        app:srcCompat="@drawable/ic_developer_image" />
+
+
+    <ImageView
+        android:id="@+id/mood_baK_image"
+        android:layout_width="80dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notice_image"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+    <TextView
+        android:id="@+id/mood_01"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/we"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/mood_baK_image"
+        app:layout_constraintTop_toTopOf="@+id/mood_baK_image" />
+
+
+    <ImageView
+        android:id="@+id/moo02_baK_image"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mood_baK_image"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+    <TextView
+        android:id="@+id/mood_02"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/are"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/moo02_baK_image"
+        app:layout_constraintTop_toTopOf="@+id/moo02_baK_image" />
+
+    <ImageView
+        android:id="@+id/about_us_background"
+        android:layout_width="370dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moo02_baK_image"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+
+    <ImageView
+        android:id="@+id/asif_image"
+        android:layout_width="158dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/fardin_image"
+        app:layout_constraintTop_toTopOf="@+id/about_us_background"
+        app:srcCompat="@drawable/ic_asif" />
+
+    <ImageView
+        android:id="@+id/fardin_image"
+        android:layout_width="151dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/about_us_background"
+        app:layout_constraintTop_toBottomOf="@+id/moo02_baK_image"
+        app:srcCompat="@drawable/ic_fardin" />
+
+
+    <TextView
+        android:id="@+id/fardin_name"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="26dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Fardin_name"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/about_us_background"
+        app:layout_constraintTop_toBottomOf="@+id/fardin_image" />
+
+    <TextView
+        android:id="@+id/fardin_dept"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Fardin_department"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/fardin_name"
+        app:layout_constraintTop_toBottomOf="@+id/fardin_name" />
+
+    <TextView
+        android:id="@+id/fardin_id"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Fardin_id"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fardin_dept"
+        app:layout_constraintTop_toBottomOf="@+id/fardin_dept" />
+
+    <TextView
+        android:id="@+id/fardin_batch"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Fardin_batch"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fardin_id"
+        app:layout_constraintTop_toBottomOf="@+id/fardin_id" />
+
+
+    <TextView
+        android:id="@+id/asif_name"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Asif_name"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/asif_image"
+        app:layout_constraintTop_toBottomOf="@+id/asif_image" />
+
+    <TextView
+        android:id="@+id/asif_dept"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Asif_department"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/asif_name"
+        app:layout_constraintTop_toBottomOf="@+id/asif_name" />
+
+    <TextView
+        android:id="@+id/asif_id"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Asif_id"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/asif_dept"
+        app:layout_constraintTop_toBottomOf="@+id/asif_dept" />
+
+    <TextView
+        android:id="@+id/asif_batch"
+        android:layout_width="149dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/Asif_batch"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/asif_id"
+        app:layout_constraintTop_toBottomOf="@+id/asif_id" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -333,8 +333,8 @@
 
     <ImageButton
         android:id="@+id/teacher_studemt_system_button"
-        android:layout_width="178dp"
-        android:layout_height="235dp"
+        android:layout_width="176dp"
+        android:layout_height="208dp"
         android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/iamge_exam_system"
@@ -344,12 +344,12 @@
     <ImageButton
         android:id="@+id/notice_board_system"
         android:layout_width="178dp"
-        android:layout_height="63dp"
+        android:layout_height="86dp"
         android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
         app:layout_constraintTop_toBottomOf="@+id/teacher_studemt_system_button"
-        app:srcCompat="@drawable/ic_card_background_purple" />
+        app:srcCompat="@drawable/ic_chat_header" />
 
 
 
@@ -519,5 +519,155 @@
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/student"
         app:layout_constraintTop_toTopOf="@+id/register_username" />
+
+
+    <ImageView
+        android:id="@+id/library"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/book_reader_button"
+        app:layout_constraintTop_toTopOf="@+id/book_reader_button"
+        app:srcCompat="@drawable/ic_library" />
+
+    <TextView
+        android:id="@+id/library_tile"
+        android:layout_width="123dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/online_books"
+        android:textColor="@color/dimen_white"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/library"
+        app:layout_constraintTop_toTopOf="@+id/book_reader_button" />
+
+    <TextView
+        android:id="@+id/LAST_READ"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/LAST_READ"
+        android:textColor="@color/dimen_white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/book_reader_button"
+        app:layout_constraintTop_toBottomOf="@+id/library" />
+
+    <TextView
+        android:id="@+id/LAST_READ_BOOK_NAME"
+        android:layout_width="155dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/LAST_READ_BOOK_NAME"
+        android:textAlignment="center"
+        android:textColor="@color/dimen_white"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/book_reader_button"
+        app:layout_constraintTop_toBottomOf="@+id/library_tile" />
+
+    <ImageView
+        android:id="@+id/notice"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
+        app:layout_constraintTop_toTopOf="@+id/teacher_studemt_system_button"
+        app:srcCompat="@drawable/ic_notice" />
+
+
+    <TextView
+        android:id="@+id/notice_title"
+        android:layout_width="71dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/notice_title"
+        android:textColor="@color/dimen_white"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/notice"
+        app:layout_constraintTop_toTopOf="@+id/teacher_studemt_system_button" />
+
+    <ImageView
+        android:id="@+id/notice_area"
+        android:layout_width="149dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
+        app:layout_constraintTop_toBottomOf="@+id/notice_title"
+        app:srcCompat="@drawable/ic_chat_header" />
+
+    <ImageView
+        android:id="@+id/notice_image"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
+        app:layout_constraintTop_toTopOf="@+id/notice_area"
+        app:srcCompat="@drawable/ic_notice_inner" />
+
+
+    <ImageButton
+        android:id="@+id/notice_border"
+        android:layout_width="122dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/teacher_studemt_system_button"
+        app:layout_constraintTop_toBottomOf="@+id/notice_image"
+        app:srcCompat="@drawable/ic_login_register" />
+
+    <TextView
+        android:id="@+id/notice_notice"
+        android:layout_width="99dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/notice_notice"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/notice_border"
+        app:layout_constraintTop_toTopOf="@+id/notice_border" />
+
+
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/product_sans"
+        android:text="@string/developer"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/developer_image"
+        app:layout_constraintTop_toTopOf="@+id/notice_board_system" />
+
+    <ImageView
+        android:id="@+id/developer_image"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/notice_board_system"
+        app:layout_constraintTop_toTopOf="@+id/notice_board_system"
+        app:srcCompat="@drawable/ic_developer_image" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

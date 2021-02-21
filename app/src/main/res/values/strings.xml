@@ -89,12 +89,21 @@
     <string name="id_field">______</string>
 
     <string name="chat_active_name">__________</string>
-
-
+    <string name="online_books">Online Library</string>
+    <string name="LAST_READ">Last Read</string>
+    <string name="LAST_READ_BOOK_NAME">Core Java By Cay S </string>
+    <string name="book_01_info">Core Java By Cay S </string>
+    <string name="book_01_info_b">Core Java by Cay S. Horstmann and Gary Cornell was originally published in the Java series of Sun Microsystems Press and is now published by Prentice-Hall </string>
+    <string name="book_01_edition">10TH EDITION </string>
+    <string name="WTTHL">Welcome to The BAUET Online Library </string>
+    <string name="Top_book">Featured :</string>
+    <string name="all_books">All Books :</string>
 
 
     <string name="test_name">Math-2247</string>
     <string name="ID">ID</string>
+    <string name="developer">Developer</string>
+    <string name="about_developer">Who are we ?</string>
     <string name="YS">Year and Semester</string>
     <string name="ys_hints">1st Year 1st Semester</string>
     <string name="ys_data">1st Year 1st Semester</string>
@@ -104,6 +113,44 @@
     <string name="enter_exam">Enter Test Zone</string>
     <string name="today_exam_title">Todays Class Test</string>
     <string name="select_pdf">Select Pdf From Storage</string>
+
+
+    <string name="books_text_01">Programming</string>
+    <string name="books_text_02">Physics</string>
+    <string name="books_text_03">Math</string>
+    <string name="read">Read Now</string>
+    <string name="notice_title">Notice</string>
+    <string name="notice_notice">Unread Notice</string>
+
+    <string name="we">We</string>
+    <string name="are">Are</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="Fardin_name">Fardin Ahosan</string>
+    <string name="Fardin_department">Computer Science and Engineering </string>
+    <string name="Fardin_id">19104013</string>
+    <string name="Fardin_batch">Ninth Batch</string>
+
+    <string name="Asif_name">Asif Ishtiaque</string>
+    <string name="Asif_department">Computer Science and Engineering </string>
+    <string name="Asif_id">19104008</string>
+    <string name="Asif_batch">Ninth Batch</string>
+
+
+
+
+
 
 
 </resources>

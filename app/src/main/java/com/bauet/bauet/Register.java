@@ -217,7 +217,6 @@ private FirebaseAuth mAuth;
                else
                {
                    //Saved Username Locally
-                   savedDisplayName();
                    savedTOInformationMVC();
                    //After Suceessfuly Registering it will go back to Login Activity
                    Intent intent = new Intent(Register.this,Login.class);
@@ -244,17 +243,12 @@ private FirebaseAuth mAuth;
                .show();
    }
 
-   private void savedDisplayName()
-   {
-       String username = mUsernameView.getText().toString();
-       SharedPreferences perfs =  getSharedPreferences(CHAT_PREFS,0);
-       perfs.edit().putString(DISPLAY_NAME_KEY,username).apply();
-   }
+
 
 
     private void savedTOInformationMVC()
     {
-
+        String username = mUsernameView.getText().toString();
         String ID = mID.getText().toString();
         String YS = mYS.getText().toString();
         String Dept = mDepartment.getText().toString();
@@ -266,6 +260,7 @@ private FirebaseAuth mAuth;
         editor.putString("ysLS",YS);
         editor.putString("deptLS",Dept);
         editor.putString("batchLS",Batch);
+        editor.putString("usernameLS",username);
         editor.commit();
         Toast.makeText(Register.this, "Data Saved", Toast.LENGTH_SHORT).show();
 
