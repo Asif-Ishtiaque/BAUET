@@ -6,13 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -43,6 +46,12 @@ public class exam extends AppCompatActivity {
 
         //Full Screen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        //User Name Update
+        dataUI();
+
+
 
         mStorageReference = FirebaseStorage.getInstance().getReference();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("PDF ANSWER SHEET");
@@ -81,6 +90,7 @@ public class exam extends AppCompatActivity {
         myFile.setAction(myFile.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(myFile,"PDF FILE SELECT"),12);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -141,6 +151,25 @@ public class exam extends AppCompatActivity {
                 .setPositiveButton(android.R.string.ok,null)
                 .setIcon(R.drawable.ic_bauet)
                 .show();
+    }
+
+
+
+
+    protected void dataUI()
+    {
+
+        TextView username_text_field =(TextView) findViewById(R.id.author_exam);;
+
+        SharedPreferences fardin =  getApplicationContext().getSharedPreferences("UserRegisterPers", Context.MODE_PRIVATE);
+        String name =fardin.getString("usernameLS","");
+
+
+        username_text_field.setText(name);
+
+
+
+
     }
 
 }

@@ -2,6 +2,7 @@ package com.bauet.bauet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -83,19 +84,41 @@ public class Chat extends AppCompatActivity {
         TextView username_text_field =(TextView) findViewById(R.id.active_user);
         ImageView isActive =(ImageView) findViewById(R.id.user_active);
 
-        SharedPreferences perfs =  getSharedPreferences(Register.CHAT_PREFS, MODE_PRIVATE);
-        mDisplayName = perfs.getString(Register.DISPLAY_NAME_KEY,null);
-        if(mDisplayName == null)
+
+
+
+        SharedPreferences fardin =  getApplicationContext().getSharedPreferences("UserRegisterPers", Context.MODE_PRIVATE);
+        String name =fardin.getString("usernameLS","");
+        username_text_field.setText(name);
+
+        //Active showing
+        if(name == null)
         {
             isActive.setImageResource(R.drawable.ic_anno);
-            mDisplayName ="Anonymous";
         }
         else
         {
             isActive.setImageResource(R.drawable.ic_active);
-            username_text_field.setText(mDisplayName);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

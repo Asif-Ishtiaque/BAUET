@@ -21,14 +21,14 @@
 
     <TextView
         android:id="@+id/developer"
-        android:layout_width="247dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="35dp"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/product_sans"
         android:text="@string/about_developer"
         android:textColor="@color/semi_black"
-        android:textSize="40sp"
+        android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/developer_image"
         app:layout_constraintTop_toTopOf="@+id/notice_image" />
 
@@ -230,22 +230,30 @@
         app:layout_constraintTop_toBottomOf="@+id/asif_id" />
 
 
+    <ImageView
+        android:id="@+id/details"
+        android:layout_width="370dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/about_us_background"
+        app:layout_constraintTop_toBottomOf="@+id/about_us_background"
+        app:srcCompat="@drawable/ic_chat_header" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <TextView
+        android:id="@+id/projext_info"
+        android:layout_width="312dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/satisfy"
+        android:text="@string/projext_sign"
+        android:textAlignment="center"
+        android:textColor="@color/semi_black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/details"
+        app:layout_constraintTop_toTopOf="@+id/details" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

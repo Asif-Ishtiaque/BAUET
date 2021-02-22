@@ -103,7 +103,7 @@
     <string name="test_name">Math-2247</string>
     <string name="ID">ID</string>
     <string name="developer">Developer</string>
-    <string name="about_developer">Who are we ?</string>
+    <string name="about_developer">About Developers</string>
     <string name="YS">Year and Semester</string>
     <string name="ys_hints">1st Year 1st Semester</string>
     <string name="ys_data">1st Year 1st Semester</string>
@@ -146,6 +146,8 @@
     <string name="Asif_department">Computer Science and Engineering </string>
     <string name="Asif_id">19104008</string>
     <string name="Asif_batch">Ninth Batch</string>
+
+    <string name="projext_sign">“After 27 days of hard work, we developed this application project. It was a puzzling challenge for us to implement this many features nonetheless we made it fully functional”</string>
 
 
 

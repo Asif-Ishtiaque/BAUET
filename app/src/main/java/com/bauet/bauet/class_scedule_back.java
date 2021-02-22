@@ -1007,7 +1007,7 @@ public class class_scedule_back extends AppCompatActivity {
 
 
 
-
+     //Calender Instance
         Calendar cal = Calendar.getInstance();
         String cur_fullTime;
         TimePull tpull = new TimePull();
@@ -1022,6 +1022,8 @@ public class class_scedule_back extends AppCompatActivity {
         //////******
 
 
+
+        //Data Catch from Database Helper Class
         DatabaseHelper myDbHelper = new DatabaseHelper(class_scedule_back.this);
         try {
             myDbHelper.createDataBase();
@@ -1035,6 +1037,8 @@ public class class_scedule_back extends AppCompatActivity {
         }
 
 
+
+        //Primary Logic Behind Data Connection with Objects
         if (reallyDy.equals(day_of_Thursday)) {
 
             M_Th_f = myDbHelper.thursday_first_cursor("thursdayfirst", null, null, null, null, null, null);
